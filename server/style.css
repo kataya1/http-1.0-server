@@ -1,0 +1,105 @@
+/*IF IT'S an id use #, if it's a class use ."class name"  if it's a tag use the tag name */
+body{
+
+    background: #121212;
+    color: #fff;
+    font-family: Arial,Helvetica,sans-serif;
+
+}
+#container {
+
+	background-color:#262626;
+	/*when no width it adapts to screen size*/
+	max-width:800px;
+
+
+	margin-left: auto;
+	margin-right: auto;
+}
+	
+#header {
+	background: linear-gradient(to bottom,#1d1d1d 0,#121212 100%);
+
+	color: white;
+	text-align: center;
+	padding: 10px;
+	}
+
+#footer{
+	/*got color from youtube dark mode*/
+	background-color: #232323;
+	clear :both;
+	color: #aaa;
+	text-align: right;
+	}
+#content {
+	padding: 5px
+
+	}
+
+#navigate{
+/*	float: left;
+*/
+	padding: 0px;
+	}
+
+#main{
+/*	float: right;*/
+	background-color: #1c1c1c;
+	padding: 10px;
+	/* min-width: 100px; */
+	/* max-width: 71%; */
+	}
+/*make the links into button shapped things*/
+/*a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}*/
+/*but we're gonna just use normal links for now*/
+a:link{
+	color:#f90;
+	text-decoration: none;
+}
+a:visited{
+	color:#f90;
+	text-decoration: line-through;
+}
+a:hover{
+	color:#fb5;
+	text-decoration:underline;
+}
+a:active{
+	color:#fff;
+	text-decoration: none;
+}
+
+/*to edit the link where the page is in currently, in the naviage div*/
+#navigate .selected{
+	font-weight: bold;
+	
+}
+
+/*el5olaasa: to edit something in css you call where it is then it's component that you want to edit. see below s*/
+/*changing an un ordered list*/
+#navigate ul{
+	text-align: center;
+	list-style-type: none;
+	padding: 0px;
+}
+/*removing the margin from headers*/
+
+h1 , h2 , h3{
+	margin: 0;
+}
+.content {
+	display: grid;
+	grid-template-columns: 15% 85%;
+}

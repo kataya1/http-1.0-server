@@ -22,3 +22,11 @@ clientinput()
 
 
 # sentence = connectionSocket.recv(1024).decode()
+# msg = 'http/1.1'
+# statuscode = 200
+# statusmsg = 'ok'
+# final = msg + str(statuscode) + statusmsg
+# print(final.split())
+msg = '/index.html\n\r'
+
+print(msg[1:])
