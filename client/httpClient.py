@@ -39,8 +39,11 @@ def clientconnection():
 
     while True:
         msg = clientSocket.recv(1024)
-        sentence += msg.decode()
-        print(msg)
+        try:
+            sentence += msg.decode()
+        except:
+            sentence += msg.decode("bin64")
+        # print(msg)
         if ((sentence[-4:] == '\r\n\r\n')or(len(msg)<= 0)):
             break
     fileModify(sentence, path, command)
@@ -56,7 +59,7 @@ def clientinput():
     while 1:
         msg = input()
         if msg == '':
-            print("broke out")
+            # print("broke out")
             sentence += '\r\n\r\n'
             break
         sentence =sentence +'\r\n'+ msg
@@ -72,7 +75,7 @@ def pathFixer(path):
 def fileModify(msg, path, command):
     #message separated by lines
     msgSep = msg.split('\r\n')
-    print("heeeeeeeeeeeeey loook here" + msgSep[0])
+    print(msgSep[0])
     try:
         httpversion, statuscode, statusDescriptor = msgSep[0].split()
     except:

@@ -104,4 +104,4 @@ def fileModify(msg, path, command):
     else:
         print("??????")
 
-serverConnection(8084, 'localhost')
+serverConnection(8086, 'localhost')
